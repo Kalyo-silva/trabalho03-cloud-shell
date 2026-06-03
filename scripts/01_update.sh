@@ -31,6 +31,14 @@ atualizar_sistema() {
         return 1
     fi
 
+    # após o apt upgrade, instala o programa tree que é utilizado mais tarde.
+    if apt-get install tree -y 2>&1 | tee -a "$LOG_FILE"; then
+        echo "[$(date)] Apt-install tree concluído com sucesso." | tee -a "$LOG_FILE"
+    else
+        echo "[$(date)] ERRO: Falha durante a atualização do sistema." | tee -a "$LOG_FILE"
+        return 1
+    fi
+
     # se passou todas as etapas, retorna sucesso para o script
     return 0
 }

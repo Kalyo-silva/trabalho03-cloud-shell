@@ -28,19 +28,19 @@ while true; do
     elif [ $cmd -eq 2 ]; then
         ./02_apache.sh
     elif [ $cmd -eq 3 ]; then
-        break
+        ./03_estrutura.sh
     elif [ $cmd -eq 4 ]; then
-        break
+        ./04_backup.sh
     elif [ $cmd -eq 5 ]; then
-        break
+        ./05_deploy.sh
     elif [ $cmd -eq 6 ]; then
-        break
+        ./06_processos.sh
     elif [ $cmd -eq 7 ]; then
-        break
+        ./07_monitoramento.sh
     elif [ $cmd -eq 8 ]; then
-        break
+        ./08_usuarios_permissoes.sh
     elif [ $cmd -eq 9 ]; then
-        break
+        ./09_relatorio.sh
     elif [ $cmd -eq 0 ]; then
         break
     else
