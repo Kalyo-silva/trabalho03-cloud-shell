@@ -34,7 +34,31 @@ while true; do
     elif [ $cmd -eq 5 ]; then
         ./05_deploy.sh
     elif [ $cmd -eq 6 ]; then
-        ./06_processos.sh
+        echo "Comando: "
+        read cmd
+
+        if [[ "$cmd" == 'listar' ]]; then
+            ./06_processos.sh listar
+        elif [[ "$cmd" == 'buscar' ]]; then
+            echo "Processo: "
+            read processo 
+
+            ./06_processos.sh buscar $processo
+        elif [[ "$cmd" == 'matar' ]]; then
+            echo "PID: "
+            read PID 
+
+            ./06_processos.sh matar $PID
+        else
+            echo "$0"
+            echo "commandos:"
+            echo "  -> listar"
+            echo "  -> buscar <nome>"
+            echo "  -> matar <PID>"
+            echo
+            read wait
+        fi
+        
     elif [ $cmd -eq 7 ]; then
         ./07_monitoramento.sh
     elif [ $cmd -eq 8 ]; then
