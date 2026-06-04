@@ -4,6 +4,9 @@
 LOG_DIR="/app/logs"
 RELATORIO="$LOG_DIR/relatorio_execucao.txt"
 
+# criar diretório de logs caso não exista
+mkdir -p "$LOG_DIR"
+
 #informações do projeto
 PROJETO="Easy Delivery Co."
 TEMA="Infraestrutura para um Pequeno Serviço de Entregas"

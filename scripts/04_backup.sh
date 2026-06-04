@@ -4,6 +4,9 @@
 LOG_DIR="/app/logs"
 LOG_FILE="$LOG_DIR/backup.log"
 
+# criar diretório de logs caso não exista
+mkdir -p "$LOG_DIR"
+
 #variaveis de origem e destino do backup
 ORIGEM="build/servico-entregas"
 DESTINO="backups"
@@ -13,6 +16,8 @@ DATA_HORA=$(date +"%Y-%m-%d_%H-%M")
 #nome do arquivo de backup (com formato de data)
 BACKUP="bkp_servico_entregas_${DATA_HORA}.tar.gz"
 
+#cria a pasta de backups caso não exista
+mkdir -p "/app/$DESTINO"
 
 echo "==============================================="
 echo " Script: 04_estrutura.sh"

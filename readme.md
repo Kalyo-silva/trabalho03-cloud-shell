@@ -95,6 +95,9 @@ git clone https://github.com/Kalyo-silva/trabalho03-cloud-shell.git
 
 cd trabalho03-cloud-shell/
 
+# copiar o .env.example e modifar com os valores desejados
+cp .env.example .env
+
 docker compose build -d --build
 
 docker exec -it easydelivery-website bash
@@ -133,7 +136,7 @@ Dentro do Container docker, após executado comandos de instalação determinado
 -  **03_estrutura.sh:** Para realizar o build da aplicação e criar as estruturas necessárias para o deploy
 -  **05_deploy.sh:** Para realizar o deploy dos arquivos do website para o Web Server Apache
 
-Após isso, o website estará disponível em: ```https://Localhost:8080/```
+Após isso, o website estará disponível em: ```https://Localhost:8080/``` ou na porta definida por você no arquivo ```.env```
 
 ---
 # Explicação dos Scripts

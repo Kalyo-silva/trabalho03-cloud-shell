@@ -4,6 +4,9 @@
 LOG_DIR="/app/logs"
 LOG_FILE="$LOG_DIR/monitoramento.log"
 
+# criar diretório de logs caso não exista
+mkdir -p "$LOG_DIR"
+
 # Limites
 LIMITE_CPU=80
 LIMITE_MEMORIA=80

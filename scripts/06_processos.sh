@@ -4,6 +4,9 @@
 LOG_DIR="/app/logs"
 LOG_FILE="$LOG_DIR/processos.log"
 
+# criar diretório de logs caso não exista
+mkdir -p "$LOG_DIR"
+
 echo "==============================================="
 echo " Script: 06_processos.sh"
 echo " Descrição: Gereciamento de processos"

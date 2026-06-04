@@ -4,6 +4,9 @@
 LOG_DIR="/app/logs"
 LOG_FILE="$LOG_DIR/deploy.log"
 
+# criar diretório de logs caso não exista
+mkdir -p "$LOG_DIR"
+
 ORIGEM="/app/source"
 DESTINO="/var/www/html"
 

@@ -11,6 +11,9 @@ PROJECT_DIR="$BUILD_DIR/servico-entregas"
 # criar diretório de logs caso não exista
 mkdir -p "$LOG_DIR"
 
+# criando o diretório de build caso não exista
+mkdir -p "$BUILD_DIR"
+
 echo "==============================================="
 echo " Script: 03_estrutura.sh"
 echo " Descrição: Criação da Estrutura de Diretórios"

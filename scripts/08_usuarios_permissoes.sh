@@ -4,6 +4,9 @@
 LOG_DIR="/app/logs"
 LOG_FILE="$LOG_DIR/permisoes.log"
 
+# criar diretório de logs caso não exista
+mkdir -p "$LOG_DIR"
+
 GRUPO="entregas_ops"
 USUARIO_ENTREGA="entrega_user"
 USUARIO_WEBSITE="website_user"
